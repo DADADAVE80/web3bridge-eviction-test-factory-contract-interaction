@@ -9,11 +9,9 @@ async function main() {
 
     const createSchoolTx = await schoolFactoryContract.createSchool("My School");
     await createSchoolTx.wait();
+    console.log("School created: ", createSchoolTx);
 
     const getDeployedSchoolsTx = await schoolFactoryContract.getDeployedSchools();
-    // await getDeployedSchoolsTx.wait();
-
-    
     console.log("Deployed schools: ", getDeployedSchoolsTx);
 }
 
